@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-    before_action :set_pet 
+    before_action :set_pet, only: [:show, :upate, :edit, :destroy]
 
     def index
         @pets = Pet.all
@@ -19,6 +19,7 @@ class PetsController < ApplicationController
             redirect_to pet_path(@pet)
         else
             redirect_to new_pet_path(@pet)
+        end
     end
 
     def edit
@@ -31,10 +32,12 @@ class PetsController < ApplicationController
             redirect_to pet_path(@pet)
         else
             redirect_to new_pet_path(@pet)
+        end
     end
 
     def destroy
-        @pet = Pet.destroy
+        set_pet.destroy
+        redirect_to pets_path
     end
 
     private
@@ -44,6 +47,7 @@ class PetsController < ApplicationController
     end
 
     def pet_params
-        params.require(:pet).permit(:name, :age, :breed, :animal_type)
+        params.require(:pet).permit(:name, :age, :breed, :animal_type, :img_url)
     end
+
 end

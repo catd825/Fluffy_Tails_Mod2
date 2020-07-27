@@ -1,0 +1,27 @@
+<%= form_for @pet do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    
+    <%= f.label :animal_type %>
+    <%= f.text_field :animal_type %>
+    <br>
+    
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+    <br>
+
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br>
+
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+    <br>
+    
+    
+    <%= f.submit %>
+    <% end %>
+    
+    <%= link_to "Back to all pets", pets_path %><br>
