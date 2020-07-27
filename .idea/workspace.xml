@@ -23,6 +23,7 @@
       <change afterPath="$PROJECT_DIR$/app/views/favorites/index.html.erb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/views/favorites/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +177,7 @@
       <updated>1595861535495</updated>
       <workItem from="1595861540218" duration="278000" />
       <workItem from="1595863091709" duration="4113000" />
-      <workItem from="1595870866044" duration="3030000" />
+      <workItem from="1595870866044" duration="3341000" />
     </task>
     <servers />
   </component>
