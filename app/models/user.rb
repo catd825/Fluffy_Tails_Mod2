@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  has_many :pets
-  has_many :locations, through: :pets
+  has_many :favorites
+  has_many :pets, through: :favorites
 
 end
