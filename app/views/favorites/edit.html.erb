@@ -1,0 +1,12 @@
+<H1>Edit <%= @favorite.id %></H1>
+
+<%=form_for @favorite do |f| %>
+  <%= f.label :user_id %>
+  <%= f.collection_select :user_id, @users, :id, :name %>
+
+  <%= f.label :pet_id %>
+  <%= f.collection_select :pet_id, @pets, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>

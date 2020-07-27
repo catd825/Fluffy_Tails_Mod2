@@ -10,15 +10,20 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+    @users = User.all
+    @pets = Pet.all
   end
 
   def create
     @favorite = Favorite.create(favorite_params)
+
     redirect_to favorite_path(@favorite)
   end
 
   def edit
     @favorite = Favorite.find(params[:id])
+    @users = User.all
+    @pets = Pet.all
   end
 
   def update
