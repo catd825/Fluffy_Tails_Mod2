@@ -1,0 +1,19 @@
+<%= form_for @location do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <br>
+    
+    <%= f.label :phone %>
+    <%= f.number_field :phone %>
+    <br>
+    
+    
+    <%= f.submit %>
+    <% end %>
+    
+    <%= link_to "Back to all locations", locations_path %><br>

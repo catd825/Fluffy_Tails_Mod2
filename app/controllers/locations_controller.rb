@@ -14,7 +14,7 @@ class LocationsController < ApplicationController
 
     def create
         @location = Location.create(location_params)
-        
+
 
         if @location
             redirect_to locations_path  
@@ -28,9 +28,8 @@ class LocationsController < ApplicationController
     end
 
     def update
-        location = find_location.update(location_params)
-        if location  
-            redirect_to location_path(location)
+        if find_location.update(location_params)
+            redirect_to location_path(@location)
         else
             redirect_to edit_location_path
         end

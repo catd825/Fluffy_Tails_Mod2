@@ -1,5 +1,7 @@
 <h1>All Locations</h1>
 
+<%= link_to "Create New", new_location_path %>
+<br>
 <% @locations.each do |location| %>
     <p><%= link_to location.name, location_path(location) %>, <%= location.pets.count %> available</p>
 <% end %>
