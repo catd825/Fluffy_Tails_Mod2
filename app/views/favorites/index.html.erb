@@ -1,5 +1,8 @@
 <h1>Favorite Index</h1>
 
+
+<%= link_to "Create New", new_favorite_path %><br>
+
 <% @favorites.each do |fav| %>
   <%= link_to fav.user_id, favorite_path(fav) %><br>
 <% end %>
