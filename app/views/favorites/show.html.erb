@@ -5,3 +5,7 @@ Pet: <%=@favorite.pet.name %><br>
 <br>
 
 creation date: <%=@favorite.created_at %>
+
+
+<%= button_to "EDIT", favorite_path(@favorite) %>
+<%= button_to "DELETE", favorite_path(@favorite), method: :delete %>

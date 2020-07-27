@@ -1,5 +1,10 @@
 <h1>Favorite Index</h1>
 
+
+<form method="post" action="/favorites/new" class="button_to">
+  <input value="New" type="submit" />
+</form>"
+
 <% @favorites.each do |fav| %>
   <%= link_to fav.user_id, favorite_path(fav) %><br>
 <% end %>
