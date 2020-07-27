@@ -1,2 +1,5 @@
 Ben:
 1. Create full CRUD for favorites.
+
+Dmitry:
+1. Create full CRUD for pets. 
