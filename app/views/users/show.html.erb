@@ -5,6 +5,8 @@
 <p>Email: <%= @user.email %></p>
 
 
-<%= link_to "Return to the Index Page", users_path %><br>
-<%= link_to "Edit your Account" edit_user_path(@user) %>
-<%= button_to "Delete Account", @user, method: :delete %>
+<%= link_to "Return to the Index Page", users_path %><br><br>
+
+<%= link_to "Edit your Account", edit_user_path(@user) %><br><br>
+
+<%= button_to "Delete Account", @user, method: :delete %><br>

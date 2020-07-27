@@ -49,7 +49,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
-    def location_params 
+    def user_params 
         params.require(:user).permit(:name, :email)
     end  
 
