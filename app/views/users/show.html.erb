@@ -1,0 +1,10 @@
+<h1>User Profile Page</h1>
+
+<h2>User Details</h2>
+<p>Name: <%= @user.name %></p>
+<p>Email: <%= @user.email %></p>
+
+
+<%= link_to "Return to the Index Page", users_path %><br>
+<%= link_to "Edit your Account" edit_user_path(@user) %>
+<%= button_to "Delete Account", @user, method: :delete %>
