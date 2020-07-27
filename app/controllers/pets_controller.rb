@@ -2,6 +2,7 @@ class PetsController < ApplicationController
     before_action :set_pet 
 
     def index
+        @pets = Pet.all
     end
 
     def show
@@ -24,6 +25,12 @@ class PetsController < ApplicationController
     end
 
     def update
+        @pet = Pet.update(pet_params)
+
+        if @pet.valid?
+            redirect_to pet_path(@pet)
+        else
+            redirect_to new_pet_path(@pet)
     end
 
     def destroy
