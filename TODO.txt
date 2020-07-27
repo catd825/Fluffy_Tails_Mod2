@@ -11,3 +11,21 @@ User:
 1. Create full CRUD for User.
 
 -Create a general about page?
+
+
+
+
+1. User should be able to search for a pet. - Ben
+    -need to research how to implement a search bar or tool.
+2. User should be able to select a pet. 
+    - pet_show redirect - add a favorite button for user from this form.
+3. User should be able to favorite a pet. - Dmitry
+    - favorite by clicking star or something similiar to actually favorite?
+    - redirect_to create favorite 
+4. User should be able to delete a favorite pet. - Cathy
+    - CRUD for user
+    - remove from user favorites, from user profile
+
+5. Pet should be able to be assigned to a location
+
+6. Validate breed, pet form fields. 
