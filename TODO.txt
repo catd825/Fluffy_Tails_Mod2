@@ -2,13 +2,12 @@ Ben:
 1. Create full CRUD for favorites.
 
 Dmitry:
-<<<<<<< HEAD
 1. Create full CRUD for pets. - first version done.
     Validations?
 
     
-    
-=======
-1. Create full CRUD for pets.
 
->>>>>>> db933cf5d99b4bfe86a61d2075487fe85e1c7981
+User:
+1. Create full CRUD for User.
+
+-Create a general about page?
