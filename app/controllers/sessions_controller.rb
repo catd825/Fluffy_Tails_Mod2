@@ -14,14 +14,12 @@ class SessionsController < ApplicationController
       else 
         flash[:error] = "Username or Password is incorrect"
         redirect_to new_session_path
-      end 
-      
+      end
     end 
     
     def logout 
       session.delete(:user_id)
       redirect_to new_user_path
-    end 
-    
+    end
 
 end
