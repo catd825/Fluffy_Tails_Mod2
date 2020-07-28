@@ -47,11 +47,10 @@
     
 
 
-<div class="container"> 
+<div class="row"> 
 <% @pets.each do |pet| %>
-
-   <div class="index-tile"> 
-   <h3><%= link_to pet.name, pet_path(pet) %>, <%= pet.animal_type %> </h3>
+   <div class="column"> 
+   <%= link_to pet.name, pet_path(pet) %>, <%= pet.animal_type %>
    <img class="index-img" src="<%= pet.img_url %>" alt="<%= pet.name%>"> 
    </div> 
    <% end %>
