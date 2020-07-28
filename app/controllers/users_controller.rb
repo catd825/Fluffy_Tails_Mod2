@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    before_action :require_login, only: [:edit, :destroy, :show]
     
     def index 
         @users = User.all
@@ -52,5 +52,9 @@ class UsersController < ApplicationController
     def user_params 
         params.require(:user).permit(:name, :email)
     end  
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
+    end
 
 end

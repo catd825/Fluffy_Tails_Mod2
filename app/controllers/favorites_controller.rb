@@ -38,6 +38,7 @@ class FavoritesController < ApplicationController
     redirect_to favorites_path
   end
 
+
   private
 
   def favorite_params
