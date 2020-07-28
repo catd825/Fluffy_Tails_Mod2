@@ -6,6 +6,8 @@ class PetsController < ApplicationController
         if params[:search]
             @search_term = params[:search]
             @pets = Pet.search_by(@search_term)
+        else
+            @pets = Pet.all
         end
     end
 
