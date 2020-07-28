@@ -23,5 +23,11 @@ class SessionsController < ApplicationController
       redirect_to new_user_path
     end 
     
+    # def reset_page
+    #   cookies[:page_count] = 0
+    #   redirect_back fallback_location: users_path
+    # end
+
+
 
 end
