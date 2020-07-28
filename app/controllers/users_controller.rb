@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     
     def index
         @users = User.all
-        @pets = Pet.where(["name LIKE ?", "%#{params[:search]}"])
     end
 
     def show  
