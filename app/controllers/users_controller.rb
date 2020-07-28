@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-
+    # before_action :require_login, only: [:edit, :destroy, :show]
+    before_action :find_user, only: [:edit, :update]
+    skip_before_action :authorized, only: [:new, :create, :index]
     
     def index
         if params[:search]
@@ -9,11 +11,16 @@ class UsersController < ApplicationController
 
         @users = User.all
 
-
     end
 
     def show  
-        find_user
+        @user = User.find(params[:id])
+        if @user == @current_user 
+          render :show 
+        else 
+          flash[:error] = "Can only See Your Own Profile"
+          redirect_to users_path
+        end
     end
 
     def new  
@@ -22,9 +29,8 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
-
-
-        if @user
+        if @user.valid?
+            session[:user_id] = @user.id
             redirect_to users_path  
         else
             redirect_to new_user_path
@@ -57,7 +63,11 @@ class UsersController < ApplicationController
     end
 
     def user_params 
-        params.require(:user).permit(:name, :email, :search)
+        params.require(:user).permit(:name, :email, :search, :password)
     end  
+
+    # def require_login
+    #     return head(:forbidden) unless session.include? :user_id
+    # end
 
 end

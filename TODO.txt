@@ -12,6 +12,7 @@ User:
 
 - Propogate navbar across all other pages
     - Make a cut off with a divider on bottom of the page
+    - Is it possible to have a few backgound images autoscroll?
 
 - User log in 
 
