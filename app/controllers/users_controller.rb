@@ -2,8 +2,14 @@ class UsersController < ApplicationController
 
     
     def index
+        if params[:search]
+            @search_term = params[:search]
+            @pets = @pets.search_by(@search_term)
+        end
+
         @users = User.all
-        @pets = Pet.where(["name LIKE ?", "%#{params[:search]}"])
+
+
     end
 
     def show  
