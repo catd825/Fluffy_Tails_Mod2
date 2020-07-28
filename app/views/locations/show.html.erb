@@ -1,0 +1,18 @@
+<h1>Location Show Page</h1>
+
+<h2>Location Details</h2>
+<p>Name: <%= @location.name %></p>
+<p>Address: <%= @location.address %></p>
+<p>Phone: <%= @location.phone %></p>
+
+<h2>Animals Available</h2>
+<% @location.pets.each do |pet| %>
+    <h3>Name: <%= pet.name %></h3>
+    <p>Animal: <%= pet.animal_type %></p>
+    <p>Breed: <%= pet.breed %></p>
+    <p>Age: <%= pet.age %></p>
+    <p><%= link_to "Link", pet_path(pet.id) %></p> 
+<% end %>
+
+<%= link_to "Back to all locations", locations_path %><br>
+<%= button_to "Delete", @location, method: :delete %>
