@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     
     def index 
         @users = User.all
+        @pets = Pet.search(params[:search])
     end
 
     def show  
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
     end
 
     def user_params 
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:name, :email, :search)
     end  
 
 end
