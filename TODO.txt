@@ -5,15 +5,19 @@ Dmitry:
 1. Create full CRUD for pets. - first version done.
     Validations?
 
-
-
-
-=======
 User:
 1. Create full CRUD for User.
 
 -Create a general about page?
 
+- Propogate navbar across all other pages
+    - Make a cut off with a divider on bottom of the page
+
+- User log in 
+
+- Make a CSV of animal pic urls to propogate across the database
+
+- Initial web scraping for info. 
 
 
 
