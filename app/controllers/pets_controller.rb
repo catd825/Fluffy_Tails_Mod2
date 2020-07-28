@@ -10,14 +10,15 @@ class PetsController < ApplicationController
 
     def new
         @pet = Pet.new
+        @locations = Location.all
     end
 
     def create
         @pet = Pet.create(pet_params)
-
         if @pet.valid?
             redirect_to pet_path(@pet)
         else
+            flash[:errors] = @pet.errors.full_messages
             redirect_to new_pet_path(@pet)
         end
     end
@@ -47,7 +48,7 @@ class PetsController < ApplicationController
     end
 
     def pet_params
-        params.require(:pet).permit(:name, :age, :breed, :animal_type, :img_url)
+        params.require(:pet).permit(:name, :age, :breed, :animal_type, :img_url, :location_id)
     end
 
 end
