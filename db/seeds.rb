@@ -5,7 +5,7 @@ Location.destroy_all
 
 
 20.times do
-User.create(name: Faker::Name.name, email:Faker::Internet.email)
+User.create(name: Faker::Name.name, username: Faker::Name.name, email:Faker::Internet.email)
 end
 
 20.times do
