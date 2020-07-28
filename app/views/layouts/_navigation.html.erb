@@ -15,12 +15,16 @@
       </li>
       <li class="nav-item">
         <% if @current_user %>
+<<<<<<< HEAD
         <a class="nav-link" href="<%= user_path(@current_user) %>"><%= @current_user.name %></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href= "<%= pets_path %>" >Edit User</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href= "<%= locations_path%>" >Delete User</a>
         </div>
+=======
+        <a class="nav-link" href="<%= user_path(@current_user) %>"><"<%= @current_user.name %>"></a>
+>>>>>>> 4b964bd53ece59ea779b15ec7e858918e1161372
         <% else %>
         <a class="nav-link" href="<%= new_session_path %>">Login</a>
         <% end %>
