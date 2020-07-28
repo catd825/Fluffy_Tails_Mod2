@@ -21,11 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7df60ad-f96b-4552-a290-7909f0daeda6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pets_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pet.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pet.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
