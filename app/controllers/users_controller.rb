@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     # before_action :require_login, only: [:edit, :destroy, :show]
     before_action :find_user, only: [:show, :edit, :update]
+    skip_before_action :authorized, only: [:index, :login]
     
     def index
         @users = User.all
@@ -22,7 +23,8 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
 
 
-        if @user
+        if @user.valid?
+            session[:user_id] = @user.id
             redirect_to users_path  
         else
             redirect_to new_user_path

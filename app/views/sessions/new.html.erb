@@ -1,5 +1,23 @@
-<form method='post'>
+<%# <form method='post'>
   <input name='name'>
   <input name='password'>
   <input type='submit' value='login'>
-</form>
+</form> %>
+
+<%# not submitting actualy params %>
+
+<%= form_for :user do |f| %>
+
+
+   <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <br>
+    
+    
+    <%= f.submit %>
+    <% end %>
