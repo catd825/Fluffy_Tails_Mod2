@@ -1,8 +1,12 @@
 class PetsController < ApplicationController
     before_action :set_pet, only: [:show, :upate, :edit, :destroy]
+    skip_before_action :authorized, only: [:index, :show]
 
     def index
-        @pets = Pet.where(["animal_type LIKE ?", "%#{params[:search]}"])
+        if params[:search]
+            @search_term = params[:search]
+            @pets = Pet.search_by(@search_term)
+        end
     end
 
     def show

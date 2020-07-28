@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   resources :users
   resources :locations
   resources :pets
+  resources :searches
+
+  get '/sessions/new', to: 'sessions#new', as: 'new_session'
+  post '/sessions', to: 'sessions#login', as: 'login'
+  delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
 
 end

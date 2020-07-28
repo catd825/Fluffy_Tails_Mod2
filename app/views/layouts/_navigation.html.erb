@@ -1,3 +1,4 @@
+<%= csrf_meta_tags %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Our Site Name</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,10 +11,14 @@
         <a class="nav-link" href="<%= users_path %>">Home <span class="sr-only">(current)</span></a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
+        <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <% if @current_user %>
+        <a class="nav-link" href="<%= user_path(@current_user) %>"><%= @current_user.name %></a>
+        <% else %>
+        <a class="nav-link" href="<%= new_session_path %>">Login</a>
+        <% end %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,8 +33,8 @@
       </li>
     </ul>
 
-    <%= form_tag(pets_path, :method => :get) do %>
-      <%= text_field_tag(:search, params[:search]) %>
+    <%= form_for "", url: pets_path, role: "search", method: :get do %>
+      <%= text_field_tag :search, @search_term, placeholder: "Search Pets" %>
       <%= submit_tag ("Search") %>
     <% end %>
 
