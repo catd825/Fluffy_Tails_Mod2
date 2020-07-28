@@ -2,7 +2,7 @@ class PetsController < ApplicationController
     before_action :set_pet, only: [:show, :upate, :edit, :destroy]
 
     def index
-        @pets = Pet.all
+        @pets = Pet.where(["animal_type LIKE ?", "%#{params[:search]}"])
     end
 
     def show

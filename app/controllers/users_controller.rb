@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
     
-    def index 
+    def index
         @users = User.all
-        @pets = Pet.search(params[:search])
+        @pets = Pet.where(["animal_type LIKE ?", "%#{params[:search]}"])
     end
 
     def show  
