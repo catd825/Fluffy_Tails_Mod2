@@ -30,6 +30,16 @@
 
     <br><br><h1> INDEX PAGE </h1>
 
+  <h4>Search By Animal Type</h4>
+  <%= form_tag(pets_path, :method => :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search") %>
+  <% end %>
+
+
+
+
+
   </body>
 </html>
 

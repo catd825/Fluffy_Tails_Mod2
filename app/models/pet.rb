@@ -7,4 +7,7 @@ class Pet < ApplicationRecord
   validates :breed, presence: true
   validates :animal_type, presence: true
   validates :age, presence: true
+
+
+
 end

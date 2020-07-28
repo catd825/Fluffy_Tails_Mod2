@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
     before_action :require_login, only: [:edit, :destroy, :show]
     
-    def index 
+    def index
         @users = User.all
+        @pets = Pet.where(["animal_type LIKE ?", "%#{params[:search]}"])
     end
 
     def show  
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
     end
 
     def user_params 
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:name, :email, :search)
     end  
 
     def require_login
