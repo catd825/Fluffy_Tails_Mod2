@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <%= stylesheet_link_tag "application.css" %>
-    
-    <title>Adopt a Pet!</title>
+
+    <title>Login</title>
   </head>
   <body>
 
@@ -27,26 +28,21 @@
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
+<% if flash[:error] %>
+  <p style="color: red;"><%= flash[:error] %></p>
+<% end %>
 
-<%= link_to "List New Pet", new_pet_path %>
-<br>
+<%= form_for :session, url: login_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
+  <%= f.label :password %>
+  <%= f.password_field :password %>
 
-
-
-    
-
-
-<div class="container"> 
-<% @pets.each do |pet| %>
-
-   <div class="index-tile"> 
-   <h3><%= link_to pet.name, pet_path(pet) %>, <%= pet.animal_type %> </h3>
-   <img class="index-img" src="<%= pet.img_url %>" alt="<%= pet.name%>"> 
-   </div> 
-   <% end %>
-</div>
-
+  <%= f.submit %>
+<% end %>
 
 </body>
 </html>
+
+
