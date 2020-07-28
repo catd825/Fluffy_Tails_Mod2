@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_27_170530) do
+ActiveRecord::Schema.define(version: 2020_07_28_164955) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(version: 2020_07_27_170530) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "img_url"
     t.string "animal_type"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.string "name"
+    t.string "breed"
+    t.string "animal_type"
+    t.integer "phone_number"
+    t.integer "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
