@@ -13,18 +13,22 @@
         <li class="nav-item">
         <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
       </li>
+
+
       <li class="nav-item">
         <% if @current_user %>
         <a class="nav-link" href="<%= user_path(@current_user) %>"><%= @current_user.name %></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href= "<%= pets_path %>" >Edit User</a>
-        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider"></div>  
         <a class="dropdown-item" href= "<%= locations_path%>" >Delete User</a>
         </div>
         <% else %>
         <a class="nav-link" href="<%= new_session_path %>">Login</a>
         <% end %>
         </li>
+
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           More
@@ -33,7 +37,6 @@
           <a class="dropdown-item" href= "<%= pets_path %>" >See all the Pets</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href= "<%= locations_path%>" >See all the Locations</a>
-
         </div>
       </li>
     </ul>
