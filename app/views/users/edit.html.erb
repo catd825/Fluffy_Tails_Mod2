@@ -25,7 +25,9 @@
     </header>
     <main role="main">
     <%= content_for?(:content) ? yield(:content) : yield %>
+
     <%= render 'form' %>
+    
     </main>
 
   </body>
