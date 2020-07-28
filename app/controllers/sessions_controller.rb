@@ -1,16 +1,23 @@
 class SessionsController < ApplicationController
 
-    # def new
-    #     # nothing to do here!
-    # end
- 
-    # def create
-    #     session[:username] = params[:username]
-    #     redirect_to '/'
-    # end
+    def new
+    end
+  
+    def create
+      return redirect_to(controller: 'sessions',
+                         action: 'new') if !params[:name] || params[:name].empty?
+      session[:name] = params[:name]
+      redirect_to controller: 'users', action: 'index'
+    end
+  
+    def destroy
+      session.delete :name
+      redirect_to controller: 'users', action: 'index'
+    end
 
-    # def destroy
-    #     session.delete :username
-    #   end
-
+    private
+    
+    def login_params
+        params.require(:user).permit(:name, :password)
+    end
 end
