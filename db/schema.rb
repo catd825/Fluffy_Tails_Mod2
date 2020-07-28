@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 2020_07_28_160700) do
     t.string "animal_type"
   end
 
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.string "name"
+    t.string "breed"
+    t.string "animal_type"
+    t.integer "phone_number"
+    t.integer "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"

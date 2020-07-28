@@ -28,6 +28,8 @@
     </main>
 
 
+    <br><br><h1> INDEX PAGE </h1>
+
 <%= link_to "List New Pet", new_pet_path %>
 <br>
 
@@ -43,8 +45,9 @@
    <div class="index-tile"> 
    <h3><%= link_to pet.name, pet_path(pet) %>, <%= pet.animal_type %> </h3>
    <img class="index-img" src="<%= pet.img_url %>" alt="<%= pet.name%>"> 
-   </div> 
-   <% end %>
+   </div>
+
+  <% end %>
 </div>
 
 

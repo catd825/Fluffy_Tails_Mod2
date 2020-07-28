@@ -8,4 +8,8 @@ class Pet < ApplicationRecord
   validates :animal_type, presence: true
   validates :age, presence: true
 
+  def self.search_by(search_term)
+    where("LOWER(name) LIKE :search_term OR LOWER(animal_type) LIKE :search_term", search_term: "%#{search_term.downcase}%")
+  end
+
 end
