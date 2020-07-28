@@ -8,6 +8,4 @@ class Pet < ApplicationRecord
   validates :animal_type, presence: true
   validates :age, presence: true
 
-
-
 end

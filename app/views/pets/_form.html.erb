@@ -18,6 +18,12 @@
 
     <%= f.label :img_url %>
     <%= f.text_field :img_url %>
+
+    <br>
+
+    <%= f.label :location_id %>
+    <%= f.collection_select :location_id, @locations, :id, :name %>
+
     <br>
     
     
