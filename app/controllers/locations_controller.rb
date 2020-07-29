@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+    before_action :current_user
     skip_before_action :authorized, only: [:index, :show]
 
     def index 
@@ -51,6 +52,10 @@ class LocationsController < ApplicationController
 
     def location_params 
         params.require(:location).permit(:name, :address, :phone)
+    end
+
+    def current_user
+        @current_user = set_user 
     end
 
 end
