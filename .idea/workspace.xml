@@ -19,27 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7df60ad-f96b-4552-a290-7909f0daeda6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/sessions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sessions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/locations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/locations/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/locations/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/locations/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/locations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/locations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/locations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/locations/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pets/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pets/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/sessions/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="d7df60ad-f96b-4552-a290-7909f0daeda6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +175,7 @@
       <workItem from="1595885010747" duration="1109000" />
       <workItem from="1595941379103" duration="2777000" />
       <workItem from="1595945715014" duration="2668000" />
-      <workItem from="1596027709785" duration="6883000" />
+      <workItem from="1596027709785" duration="7189000" />
     </task>
     <servers />
   </component>
