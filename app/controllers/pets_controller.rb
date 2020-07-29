@@ -36,6 +36,9 @@ class PetsController < ApplicationController
     end
 
     def update
+
+        @favorite_exists = Favorite.where(pet: @pet, user: current_user) == [] ? false : true
+
         @pet = Pet.update(pet_params)
 
         if @pet.valid?
