@@ -25,7 +25,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
 
-gem 'acts_as_favoritor'
 gem 'jquery-rails'
 
 # Use Active Storage variant

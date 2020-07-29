@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
     
     def logout 
       session.delete(:user_id)
+      flash[:notice] = "Please sign up or log in"
       redirect_to new_user_path
     end
 

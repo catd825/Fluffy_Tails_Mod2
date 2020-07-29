@@ -1,3 +1,6 @@
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
 
 <!doctype html>
 <html lang="en">
@@ -31,9 +34,11 @@
 
 
     <%= render 'form' %>
+
     <div class="push"></div>
   </div>
   <footer class="footer">This is a Footer</footer>
+
   </body>
 </html>
 
