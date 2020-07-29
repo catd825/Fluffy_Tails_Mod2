@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-
+    <div class="wrapper">
     <header>
       <%= render 'layouts/navigation' %>
     </header>
@@ -35,8 +35,10 @@
 <% @locations.each do |location| %>
     <p><%= link_to location.name, location_path(location) %>, <%= location.pets.count %> available</p>
 <% end %>
-    <div class="footer">
-      <p></p>
-    </div>
+
+
+  <div class="push"></div>
+  </div>
+  <footer class="footer">This is a Footer</footer>
 </body>
 </html>

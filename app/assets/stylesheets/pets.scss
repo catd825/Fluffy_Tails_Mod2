@@ -24,11 +24,13 @@ text-align: center;
 flex: 25%;
 max-width: 50%;
 padding: 10px 10px;
+
 }
 
 .column img {
-margin-top: 0px;
-vertical-align: middle;
+display: inline;
+margin: 0 auto;
+// vertical-align: middle;
 width: 100%;
 }
 
@@ -49,19 +51,24 @@ width: 100%;
 }
 
 .border {
-border-radius: 10px;
+border-radius: 10%;
 background: white;
 padding: 1px;
 width: 100%;
-height: 90%;
-
+height: 95%;
+overflow: hidden;
 }
 
 .pet-img {
+  text-align: center;
   width: 500px;
+
   margin: auto;
-  padding-top: 100px;
-  border-radius: 50%;
+  margin-top: 100px;
+  // padding-top: 100px;
+  border: 1px solid;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .container2 {
@@ -70,6 +77,10 @@ height: 90%;
   background-color: white;
   width: 500px;
   margin: auto;
+}
+
+.container {
+  margin-top: 5%;
 }
 
 #pet-name {
