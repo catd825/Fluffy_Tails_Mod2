@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
-    before_action :set_pet, only: [:show, :update, :edit, :destroy]
+    before_action :set_pet, only: [:show, :upate, :edit, :destroy]
+    before_action :current_user
     skip_before_action :authorized, only: [:index, :show]
 
     def index
@@ -9,6 +10,8 @@ class PetsController < ApplicationController
         else
             @pets = Pet.all
         end
+        # @current_user = set_user
+        # byebug
     end
 
     def show
@@ -60,5 +63,8 @@ class PetsController < ApplicationController
         params.require(:pet).permit(:name, :age, :breed, :animal_type, :img_url, :location_id)
     end
 
+    def current_user
+        @current_user = set_user 
+    end
 
 end
