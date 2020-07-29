@@ -30,19 +30,22 @@
 
 
 
-<h1>Pet Show Page</h1>
+<p class=center><%= image_tag @pet.img_url, size: "492x328" %><p>
 
-<h2>Pet Details</h2>
+<div class="container">
 <p>Name: <%= @pet.name %></p>
 <p>Animal Type: <%= @pet.animal_type %></p>
 <p>Breed: <%= @pet.breed %></p>
 <p>Age: <%= @pet.age %></p>
-<p>Picture: <%= image_tag @pet.img_url, size: "492x328" %><p>
+</div>
 
 <%= link_to "Add To Favorites", action: "create", controller: "favorites" %><br>
 
-<%= link_to "Back to all pets", pets_path %><br>
-<%= button_to "Delete", @pet, method: :delete %>
+
+<%# 
+<%= link_to "Back to all pets", pets_path %>
+<%# <%= button_to "Delete", @pet, method: :delete %>
+
     <div class="footer">
       <p></p>
     </div>

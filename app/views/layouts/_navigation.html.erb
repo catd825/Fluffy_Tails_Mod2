@@ -1,5 +1,5 @@
-<%= csrf_meta_tags %>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
   <a class="navbar-brand" href="<%= users_path %>"><i class="fa fa-paw"></i> Fluffy Tail</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,17 +12,26 @@
         </li>
 
       <li class="nav-item">
+
+        
+        <li class="nav-item dropdown">
         <% if @current_user %>
-        <a class="nav-link" href="<%= user_path(@current_user) %>"><%= @current_user.name %></a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= @current_user.name %> Details
+        </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href= "<%= pets_path %>" >Edit User</a>
-        <div class="dropdown-divider"></div>  
-        <a class="dropdown-item" href= "<%= locations_path%>" >Delete User</a>
+          <a class="dropdown-item" href="<%= user_path(@current_user) %>">Details</a>
+          <a class="dropdown-item" href="<%= edit_user_path(@current_user) %>">Edit</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="<%= logout_path %>">Logout</a>
         </div>
+      </li>
+
         <% else %>
         <a class="nav-link" href="<%= new_session_path %>">Login</a>
         <% end %>
         </li>
+
 
         <li class="nav-item">
           <a class="nav-link" href="<%= pets_path %>">Pets</a>
@@ -31,7 +40,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<%= locations_path %>">Locations</a>
         </li>
+
     </ul>
+
 
     <%= form_for "", url: pets_path, role: "search", method: :get do %>
       <%= text_field_tag :search, @search_term, placeholder: "Search Pets" %>
