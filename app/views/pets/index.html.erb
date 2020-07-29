@@ -27,24 +27,21 @@
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
-
-    <br><br><h1> INDEX PAGE </h1>
+  <div class="row"> 
+    <% @pets.each do |pet| %>
+      <div class="column"> 
+        <%= link_to image_tag(pet.img_url), pet_path(pet) %>
+        <%= link_to pet.name, pet_path(pet) %><br>
+        <%= button_to "Add To Favorites", action: "new", controller: "favorites" %>
+      </div>
+      <% end %>
+  </div>
 
 <%= link_to "List New Pet", new_pet_path %>
 <br>
 
-
-
-<div class="row"> 
-<% @pets.each do |pet| %>
-   <div class="column"> 
-   <%= link_to pet.name, pet_path(pet) %>, <%= pet.animal_type %>
-   <img class="index-img" src="<%= pet.img_url %>" alt="<%= pet.name%>"> 
-   </div>
-
-  <% end %>
-</div>
-
-
+    <div class="footer">
+      <p><hr class="solid"></p>
+    </div>
 </body>
 </html>
