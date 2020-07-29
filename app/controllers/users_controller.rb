@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     # before_action :require_login, only: [:edit, :destroy, :show]
-    before_action :find_user, only: [:edit, :update, :index]
-    skip_before_action :authorized, only: [:new, :create]
+    before_action :find_user, only: [:edit, :update]
+    skip_before_action :authorized, only: [:new, :create, :index]
     
     def index
         if params[:search]
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         end
     end
 
-    def new  
+    def new     
         @user = User.new
     end 
 
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.valid?
             session[:user_id] = @user.id
-            redirect_to users_path(@user) 
+            redirect_to user_path(@user) 
         else
             redirect_to new_user_path
         end
