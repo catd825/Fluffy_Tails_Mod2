@@ -28,20 +28,23 @@
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
-    <div class="login">
+   <div class="center"> 
+    <div class="login_box">
+      <h1 id=login_text><i class="fa fa-user"></i> Login</h1>
       <% if flash[:error] %>
         <p style="color: red;"><%= flash[:error] %></p>
       <% end %>
 
       <%= form_for :session, url: login_path do |f| %>
-      Name:      <%= f.text_field :name %><br>
-      Password:  <%= f.password_field :password %><br>
+      <p id="name"><%= f.text_field :name, placeholder: "Name" %><br></p>
+      <p id="password"><%= f.password_field :password, placeholder: "Password" %><br><br></p>
 
-        <%= f.submit "Login" %><br>
+        <p id=login_button><%= f.submit "Login" %><br></p>
       <% end %>
     </div>
+    </div>
         <div class="footer">
-      <p><hr class="solid"></p>
+      <p></p>
     </div>
   </body>
 </html>
