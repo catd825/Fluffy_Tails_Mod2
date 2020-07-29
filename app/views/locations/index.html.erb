@@ -35,6 +35,8 @@
 <% @locations.each do |location| %>
     <p><%= link_to location.name, location_path(location) %>, <%= location.pets.count %> available</p>
 <% end %>
-
+    <div class="footer">
+      <p><hr class="solid"></p>
+    </div>
 </body>
 </html>

@@ -1,19 +1,15 @@
 <%= csrf_meta_tags %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><i class="fa fa-paw"></i> Fluffy Tail</a>
+  <a class="navbar-brand" href="<%= users_path %>"><i class="fa fa-paw"></i> Fluffy Tail</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<%= users_path %>">Home <span class="sr-only">(current)</span></a>
-      </li>
         <li class="nav-item">
-        <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
-      </li>
-
+          <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
+        </li>
 
       <li class="nav-item">
         <% if @current_user %>
@@ -28,17 +24,13 @@
         <% end %>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="<%= pets_path %>">Pets</a>
+        </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          More
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href= "<%= pets_path %>" >See all the Pets</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href= "<%= locations_path%>" >See all the Locations</a>
-        </div>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= locations_path %>">Locations</a>
+        </li>
     </ul>
 
     <%= form_for "", url: pets_path, role: "search", method: :get do %>
