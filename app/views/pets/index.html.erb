@@ -27,17 +27,23 @@
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
+<div class="container">
   <div class="row"> 
     <% @pets.each do |pet| %>
       <div class="column"> 
-        <%= link_to image_tag(pet.img_url), pet_path(pet) %>
-        <%= link_to pet.name, pet_path(pet) %><br>
-        <%= button_to "Add To Favorites", action: "new", controller: "favorites" %>
-      </div>
+        <div class="border border-light">
+        <%= link_to image_tag(pet.img_url, border: 0), pet_path(pet), class: "img-rounded" %>
+        <%= link_to pet.name, pet_path(pet), class: "pet" %><br>
+        <%= link_to pet.breed, pet_path(pet) %><br>
+        <%= link_to content_tag(:i, nil, class: 'fa fa-star'), new_favorite_path %>
+      </div><br>
+            </div>
       <% end %>
-  </div>
 
-<%= link_to "List New Pet", new_pet_path %>
+  </div>
+  </div>
+  
+<%# <%= link_to "List New Pet", new_pet_path %>
 <br>
 
     <div class="footer">
