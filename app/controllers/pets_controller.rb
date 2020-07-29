@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-    before_action :set_pet, only: [:show, :upate, :edit, :destroy]
+    before_action :set_pet, only: [:show, :update, :edit, :destroy]
     skip_before_action :authorized, only: [:index, :show]
 
     def index
@@ -33,6 +33,9 @@ class PetsController < ApplicationController
     end
 
     def update
+
+        @favorite_exists = Favorite.where(pet: @pet, user: current_user) == [] ? false : true
+
         @pet = Pet.update(pet_params)
 
         if @pet.valid?

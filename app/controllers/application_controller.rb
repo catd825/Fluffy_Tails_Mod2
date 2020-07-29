@@ -1,9 +1,9 @@
   class ApplicationController < ActionController::Base
   before_action :authorized
   helper_method :current_user
+  helper_method :favorite_text
 
   def set_user
-    # @current_user = User.find(id: session[:user_id])
     @current_user = User.find_by(id: session[:user_id])
   end 
 
@@ -17,5 +17,9 @@
     end
   end
 
+  def favorite_text
+    return @favorite_exists ? "UnFavorite" : "Make Favorite"
+
+  end
 
 end

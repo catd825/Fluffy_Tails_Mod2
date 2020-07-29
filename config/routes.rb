@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :users
   resources :locations
   resources :pets
-  resources :searches
 
   patch '/sessions/reset_page', to: 'sessions#reset_page', as: 'session_reset'
   get '/sessions/new', to: 'sessions#new', as: 'new_session'

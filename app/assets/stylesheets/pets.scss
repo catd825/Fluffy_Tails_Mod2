@@ -57,10 +57,22 @@ height: 90%;
 
 }
 
-.img-rounded {
-border-radius: 10px;
+.pet-img {
+  width: 500px;
+  margin: auto;
+  padding-top: 100px;
+  border-radius: 50%;
 }
 
-.pet{
-text-size: 50px;
+.container2 {
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+  margin: auto;
+}
+
+#pet-name {
+  font-size: 2rem;
+
 }

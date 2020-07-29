@@ -30,18 +30,30 @@
 
 
 
-<h1>Pet Show Page</h1>
+<div class="pet-img">
+<%= image_tag @pet.img_url, size: "492x328" %>
+</div><br>
 
-<h2>Pet Details</h2>
-<p>Name: <%= @pet.name %></p>
+<div class="container2">
+<p id="pet-name">Meet <%= @pet.name %></p>
 <p>Animal Type: <%= @pet.animal_type %></p>
 <p>Breed: <%= @pet.breed %></p>
-<p>Age: <%= @pet.age %></p>
-<p>Picture: <%= image_tag @pet.img_url, size: "492x328" %><p>
+<p>Age: <%= @pet.age %></p> 
+</div>
+<br>
+<div class="container2">
+<p><%= @pet.location.name %></p>
+<p><%= @pet.location.address %></p>
+<p><%= @pet.location.phone %></p>
+</div>
 
 
-<%= link_to "Back to all pets", pets_path %><br>
-<%= button_to "Delete", @pet, method: :delete %>
+
+
+<%# 
+<%= link_to "Back to all pets", pets_path %>
+<%# <%= button_to "Delete", @pet, method: :delete %>
+
     <div class="footer">
       <p></p>
     </div>
