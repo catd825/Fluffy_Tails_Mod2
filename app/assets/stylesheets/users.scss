@@ -30,3 +30,31 @@ html {
     opacity:0;
     z-index:2;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.center {
+  position: relative;
+  margin-left: 40%;
+}
+
+.form_box {
+  width: 320px;
+  padding: 50px;
+  border: 5px solid gray;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+#signup_header {
+  text-align: center;
+}
+

@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
     # before_action :require_login, only: [:edit, :destroy, :show]
-
-    before_action :find_user, only: [:edit, :update]
-    skip_before_action :authorized, only: [:new, :create, :index]
+    before_action :find_user, only: [:edit, :update, :index]
+    skip_before_action :authorized, only: [:new, :create]
     
     def index
         if params[:search]

@@ -4,7 +4,6 @@
   helper_method :favorite_text
 
   def set_user
-    # @current_user = User.find(id: session[:user_id])
     @current_user = User.find_by(id: session[:user_id])
   end 
 
@@ -22,6 +21,5 @@
     return @favorite_exists ? "UnFavorite" : "Make Favorite"
 
   end
-
 
 end
