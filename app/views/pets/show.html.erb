@@ -39,7 +39,7 @@
 <p>Age: <%= @pet.age %></p>
 <p>Picture: <%= image_tag @pet.img_url, size: "492x328" %><p>
 
-
+<%= link_to "Add To Favorites", action: "create", controller: "favorites" %><br>
 
 <%= link_to "Back to all pets", pets_path %><br>
 <%= button_to "Delete", @pet, method: :delete %>

@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get '/sessions/new', to: 'sessions#new', as: 'new_session'
   post '/sessions', to: 'sessions#login', as: 'login'
   delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
-  
+
+
 end
