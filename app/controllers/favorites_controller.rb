@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   before_action :set_pet, only: [:show, :update, :edit, :destroy]
   skip_before_action :authorized, only: [:index, :show]
 
-<<<<<<< HEAD
+
   def index
     @favorites = Favorite.all
   end
@@ -13,6 +13,7 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+    @pets = Pet.all
   end
 
   def create
@@ -47,15 +48,6 @@ class FavoritesController < ApplicationController
       format.html {}
       format.js {}
     end
-=======
-  def new
-    @favorite = Favorite.new
->>>>>>> master
-  end
-
-  def create
-    @favorite = Favorite.create(favorite_params)
-    redirect_to user_path(@favorite)
   end
 
   private
