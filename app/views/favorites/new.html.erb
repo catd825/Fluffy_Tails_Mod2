@@ -25,18 +25,15 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+
+
+
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
-    <div>
 
-    <%= form_for @favorite do |f| %>
-      <%= f.label :pet_id %>
-      <%= f.collection_select :pet_id, @pets, :id, :name %>
-      <%= f.submit %>
-    <% end %>
 
-    </div>
+    <%= render 'form' %>
 
     <div class="footer">
       <p></p>

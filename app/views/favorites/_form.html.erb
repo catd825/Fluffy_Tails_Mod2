@@ -1,3 +1,13 @@
+<div class="center">
+  <div class=form_box>
 
+  <%= form_for @favorite do |f| %>
+    <%= f.label :pet_id %>
+    <%= f.collection_select :pet_id, @pets, :id, :name %>
+    <%= f.submit %>
+  <% end %>
+
+  </div>
+</div>
     
-    <%= link_to "Back to all pets", pets_path %><br>
+<%= link_to "Back to all pets", pets_path %><br>
