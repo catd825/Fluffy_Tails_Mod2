@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row"> 
     <% @pets.each do |pet| %>
+
       <div class="column"> 
         <div class="border border-light">
         <%= link_to image_tag(pet.img_url, border: 0), pet_path(pet), class: "img-rounded" %>

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     # before_action :require_login, only: [:edit, :destroy, :show]
     before_action :current_user
-    before_action :find_user, only: [:edit, :update]
+    before_action :find_user, only: [:edit, :update, :destroy]
     skip_before_action :authorized, only: [:new, :create, :index]
     
     def index
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
         end
     end
 
-    def destroy 
+    def destroy
         find_user.destroy
         redirect_to users_path
     end

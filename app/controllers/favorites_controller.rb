@@ -13,6 +13,7 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+    #@pet = Pet.find_by(id: )
     @pets = Pet.all
   end
 

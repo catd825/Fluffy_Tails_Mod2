@@ -9,7 +9,7 @@
 
       <% @user.favorites.each do |fav| %>
 
-        <br><%= link_to fav.pet.name, pet_path(fav) %><br>
+        <br><%= link_to fav.pet.name, pet_path(fav.pet.id) %><br>
 
       <% end %> 
       
