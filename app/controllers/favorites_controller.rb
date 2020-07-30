@@ -20,7 +20,7 @@ class FavoritesController < ApplicationController
 
   def create
     @current_user.favorites << Favorite.create(favorite_params)
-    redirect_to user_path(@current_user)
+    redirect_back(fallback_location: pets_path)
   end
 
   def update

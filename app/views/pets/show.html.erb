@@ -1,4 +1,15 @@
+<div class="fav-del-btn-container">
+  <% if @favorite_exists == false %>
+    <%= form_for @favorite do |f| %>
+      <%= f.hidden_field :pet_id, value: @pet.id %>
+      <%= f.submit "Add to Favorites", class: "btn btn-primary btn-block" %>
+    <% end %>
+  <% else %>
+    <%= button_to 'Remove from Favorites', pet_path(@pet), method: :delete, class: 'btn btn-danger btn-block'%>
+  <% end %>
+</div>
 
+<br>
 <div class="pet-img">
 <div id="carousel-pet-pics" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -42,21 +53,7 @@
 <p><%= @pet.location.phone %></p>
 </div><br>
 
-<div class="container2">
 
-  <% if @favorite_exists == false %>
-    <%= form_for @favorite do |f| %>
-      <%= f.hidden_field :pet_id, value: @pet.id %>
-      <%= f.submit %>
-    <% end %>
-
-  <% else %>
-
-    <%= button_to 'Remove Favorite', pet_path(@pet), method: :delete %>
-
-  <% end %>
-
-</div>
 
 
 

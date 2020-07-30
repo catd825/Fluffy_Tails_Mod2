@@ -54,7 +54,7 @@ width: 100%;
 }
 
 .border {
-border-radius: 10%;
+border-radius: 5px;
 background: white;
 padding: 1px;
 width: 100%;
@@ -68,13 +68,13 @@ overflow: hidden;
   margin: auto;
   // padding-top: 100px;
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 .container2 {
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: white;
   width: 500px;
   margin: auto;
@@ -87,5 +87,11 @@ overflow: hidden;
 
 #pet-name {
   font-size: 2rem;
+}
 
+.fav-del-btn-container {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 500px;
+  margin: auto;
 }
