@@ -56,6 +56,16 @@
 
   <% end %>
 
+  <div>
+     <% if @pet.favorites.count == 0 %>
+      <%= "Be the first to favorite #{@pet.name}!" %>
+      <% elsif @pet.favorites.count == 1%>
+        <%= "Loved by #{@pet.favorites.count} Fluffy Tail user" %>
+      <% else %>
+        <%= "Loved by #{@pet.favorites.count} Fluffy Tail users" %>
+      <% end %>
+  </div>
+
 </div>
 
 
