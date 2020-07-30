@@ -32,21 +32,23 @@
    <div class="center"> 
     <div class="login_box">
       <h1 id=login_text><i class="fa fa-user"></i> Login</h1>
-      <% if flash[:error] %>
-        <p style="color: red;"><%= flash[:error] %></p>
-      <% end %>
+
 
       <%= form_for :session, url: login_path do |f| %>
       <p id="name"><%= f.text_field :name, placeholder: "Name" %><br></p>
       <p id="password"><%= f.password_field :password, placeholder: "Password" %><br><br></p>
+            <% if flash[:notice] %>
+              <p style="color: red;"><%= flash[:notice] %></p>
+            <% end %>
 
         <p id=login_button><%= f.submit "Login" %><br></p>
+
       <% end %>
     </div>
     </div>
     <div class="push"></div>
   </div>
-  <footer class="footer">This is a Footer</footer>
+  <footer class="footer"> © Fuffy Tail LLP </footer>
   </body>
 </html>
 

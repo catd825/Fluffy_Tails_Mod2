@@ -29,8 +29,8 @@
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
-
-    <br><br><h2>User Details</h2><br>
+    <div class="container-users">
+    <h2>User Profile</h2>
     <p>Name: <%= @user.name %></p><br>
     <p>Email: <%= @user.email %></p><br>
 
@@ -40,30 +40,23 @@
 
         <br><%= link_to fav.pet.name, pet_path(fav) %>
 
-      <% end %> <br><br><br><a href="../pets/">Find More Pets to Love</a> <br><br><br>
+      <% end %> 
+      
+      <br><a href="../pets/">Find More Pets to Love</a> <br>
+
     </div>
-
-
 
     <%= link_to "Edit your Account", edit_user_path(@user) %><br><br>
 
     <%= button_to "Delete Account", @user, method: :delete %><br>
-
-    <div>My Favorite Pets:
-
-      <%@user.favorites.each do |fav| %>
-        <%= fav.pet.name %>
-      <% end %>
-
     </div>
-
 
 
     <div class="footer">
       <p><hr class="solid"></p>
     <div class="push"></div>
   </div>
-  <footer class="footer">This is a Footer</footer>
+  <footer class="footer"> © Fuffy Tail LLP </footer>
   </body>
 </html>
 

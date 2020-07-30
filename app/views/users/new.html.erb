@@ -1,6 +1,4 @@
-<% if flash[:notice] %>
-<%= flash[:notice] %>
-<% end %>
+
 
 <!doctype html>
 <html lang="en">
@@ -33,11 +31,38 @@
     </main>
 
 
-    <%= render 'form' %>
+   <div class="center">
+
+    <div class=form_box> 
+
+    <h1 id=signup_header><i class="fa fa-user-plus"></i> Sign Up</h1>
+      <% if flash[:error] %>
+        <% flash[:error].each do |msg| %>
+        <%= msg %><br>
+        <% end %>
+      <% end %>
+    <%= form_for @user do |f| %>
+
+    <%= f.text_field :name, placeholder: "Name" %><br>
+    <br>
+
+    <%= f.password_field :password, placeholder: "Password" %><br>
+    <br>
+    
+    <%= f.text_field :email, placeholder: "Email" %><br>
+    <br>
+
+    <%= f.submit "Sign Up"%><br>
+    <% end %>
+
+    </div>
+    </div>
+
+
 
     <div class="push"></div>
   </div>
-  <footer class="footer">This is a Footer</footer>
+  <footer class="footer"> © Fuffy Tail LLP </footer>
 
   </body>
 </html>
