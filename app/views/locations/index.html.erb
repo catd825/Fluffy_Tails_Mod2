@@ -9,7 +9,7 @@
     <p><%= location.address %><p>
     <p><%= location.phone %></p>
     
-    This location has <%= location.pets.count %> pets available.</p>
+    This location has <%= pluralize(location.pets.count, 'pet' ) %> available.</p>
     </div><br>
   <% end %>
 

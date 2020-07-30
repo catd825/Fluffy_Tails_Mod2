@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  belongs_to :location
+  belongs_to :location, default: :destroy
   has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites
 
