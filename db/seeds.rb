@@ -28,11 +28,10 @@ csv.first(21).each do |row|
   p.age = row['Age']
   p.location = Location.all.sample
   p.img_url = row['Img_Url1']
-#   p.img_url2 = row['Img_Url2']
-#   p.description = row['Description']
-#   p.gender = row['Gender']
+  p.img_url2 = row['Img_Url2']
+  p.description = row['Description']
+  p.gender = row['Gender']
   p.animal_type = row['Animal_Type']
-  byebug
   p.save
 end
 
@@ -44,5 +43,3 @@ end
 20.times do
 Favorite.create(user_id: User.all.sample.id, pet_id: Pet.all.sample.id)
 end
-
-
