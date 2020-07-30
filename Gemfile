@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
 gem 'yarn'
+gem 'puma'
 
 
 # Use Active Storage variant
