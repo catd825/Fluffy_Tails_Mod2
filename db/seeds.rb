@@ -27,7 +27,11 @@ csv.first(21).each do |row|
   p.breed = row['Breed']
   p.age = row['Age']
   p.location = Location.all.sample
-  p.animal_type = row['AnimalType']
+  p.img_url = row['Img_Url1']
+#   p.img_url2 = row['Img_Url2']
+#   p.description = row['Description']
+#   p.gender = row['Gender']
+  p.animal_type = row['Animal_Type']
   byebug
   p.save
 end
