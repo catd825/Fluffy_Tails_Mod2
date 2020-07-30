@@ -9,6 +9,16 @@
   <% end %>
 </div>
 
+  <div class="container2">
+     <% if @pet.favorites.count == 0 %>
+      <%= "Be the first to favorite #{@pet.name}!" %>
+      <% elsif @pet.favorites.count == 1%>
+        <%= "Loved by #{@pet.favorites.count} Fluffy Tail user" %>
+      <% else %>
+        <%= "Loved by #{@pet.favorites.count} Fluffy Tail users" %>
+      <% end %>
+  </div>
+
 <br>
 <div class="pet-img">
 <div id="carousel-pet-pics" class="carousel slide" data-ride="carousel">
@@ -54,6 +64,8 @@
 </div><br>
 
 
+
+</div>
 
 
 
