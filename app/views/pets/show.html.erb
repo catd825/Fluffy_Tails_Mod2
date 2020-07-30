@@ -43,9 +43,16 @@
 </div><br>
 
 <div class="container2">
-<%= link_to "Add To Favorites", action: "new", controller: "favorites" %><br>
-  <%= link_to "Remove from Favorites", action: "destroy", controller: "favorites" %><br>
+  <%= form_for @favorite do |f| %>
+    <%= f.hidden_field :pet_id, value: @pet.id %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= button_to 'Remove Favorite', pet_path(@pet), method: :delete %>
 </div>
+
+
+
 
 <%# 
 <%= link_to "Back to all pets", pets_path %>
