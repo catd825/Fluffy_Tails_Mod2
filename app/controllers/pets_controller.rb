@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-    before_action :set_pet, only: [:show, :upate, :edit, :destroy]
+    before_action :set_pet, only: [:show, :update, :edit, :destroy]
     before_action :current_user
     skip_before_action :authorized, only: [:index, :show]
 
@@ -15,6 +15,7 @@ class PetsController < ApplicationController
     end
 
     def show
+        @favorite_exists = Favorite.where(pet: @pet, user: current_user) == [] ? false : true
         @favorite = Favorite.new
         @user = current_user
     end
