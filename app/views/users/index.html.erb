@@ -1,16 +1,14 @@
 
-<% content_for :content do %>
-  <div class="wrapper">
-
     <header>
       <%= render 'layouts/navigation' %>
     </header>
 
     <main role="main">
-    <%= content_for?(:content) ? yield(:content) : yield %>
-
+      <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
+  <div class="carousel-container">
+      <hr id="index-hr">
     <div id="petSlides" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -24,10 +22,7 @@
             </div>
         </div>
     </div>
-
-
-<% end %>
-
+  </div>
 
 
 
