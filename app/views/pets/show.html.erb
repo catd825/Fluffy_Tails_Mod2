@@ -43,12 +43,19 @@
 </div><br>
 
 <div class="container2">
-  <%= form_for @favorite do |f| %>
-    <%= f.hidden_field :pet_id, value: @pet.id %>
-    <%= f.submit %>
+
+  <% if @favorite_exists == false %>
+    <%= form_for @favorite do |f| %>
+      <%= f.hidden_field :pet_id, value: @pet.id %>
+      <%= f.submit %>
+    <% end %>
+
+  <% else %>
+
+    <%= button_to 'Remove Favorite', pet_path(@pet), method: :delete %>
+
   <% end %>
 
-  <%= button_to 'Remove Favorite', pet_path(@pet), method: :delete %>
 </div>
 
 
