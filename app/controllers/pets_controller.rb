@@ -15,6 +15,8 @@ class PetsController < ApplicationController
     end
 
     def show
+        @favorite = Favorite.new
+        @user = current_user
     end
 
     def new
