@@ -9,7 +9,9 @@
 
       <% @user.favorites.each do |fav| %>
 
-        <br><%= link_to fav.pet.name, pet_path(fav) %><br>
+        <br><%= link_to fav.pet.name, pet_path(fav), class: "btn btn-primary btn-lg"%><br>
+            <%= link_to "Delete Favorite", fav, method: :delete, class: "btn btn-secondary btn-sm"%><br><br>
+
 
       <% end %> 
       

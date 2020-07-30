@@ -9,6 +9,7 @@ class FavoritesController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.find(params[:id])
   end
 
   def new
@@ -24,10 +25,15 @@ class FavoritesController < ApplicationController
   def update
   end
 
+  def delete
+    @favorite.destroy
+    redirect_to users_path
+end
+
   private
 
   def favorite_params
-    params.require(:favorite).permit( :pet_id)
+    params.require(:favorite).permit(:pet_id)
   end
 
 
