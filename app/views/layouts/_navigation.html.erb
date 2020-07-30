@@ -7,9 +7,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
-        </li>
+
 
       <li class="nav-item">
 
@@ -17,7 +15,7 @@
         <li class="nav-item dropdown">
         <% if @current_user %>
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= @current_user.name %> Details
+          <%= @current_user.name %>'s Details
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<%= user_path(@current_user) %>">Details</a>
@@ -29,6 +27,9 @@
       </li>
 
         <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_user_path %>">Sign Up</a>
+        </li>
         <a class="nav-link" href="<%= new_session_path %>">Login</a>
         <% end %>
         </li>
