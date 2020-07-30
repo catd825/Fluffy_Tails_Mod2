@@ -27,14 +27,15 @@
     </main>
 
 
-    <br><br><h1> INDEX PAGE </h1>
+<%# <%= link_to "Create New", new_location_path %>
 
 
-<%= link_to "Create New", new_location_path %>
-<br>
-<% @locations.each do |location| %>
-    <p><%= link_to location.name, location_path(location) %>, <%= location.pets.count %> available</p>
-<% end %>
+  <% @locations.each do |location| %>
+  <div class="container2">
+    <p><%= link_to location.name, location_path(location) %>, <%= location.pets.count %> pets available</p>
+    </div><br>
+  <% end %>
+
 
 
   <div class="push"></div>

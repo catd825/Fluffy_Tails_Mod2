@@ -38,17 +38,17 @@
 
       <% @user.favorites.each do |fav| %>
 
-        <br><%= link_to fav.pet.name, pet_path(fav) %>
+        <br><%= link_to fav.pet.name, pet_path(fav) %><br>
 
       <% end %> 
       
-      <br><a href="../pets/">Find More Pets to Love</a> <br>
+      <br><a href="../pets/">Find More Pets to Love</a> <br><br>
 
     </div>
 
-    <%= link_to "Edit your Account", edit_user_path(@user) %><br><br>
+    <%= link_to "Edit your Account", edit_user_path(@user), class: "btn btn-primary"%><br><br>
 
-    <%= button_to "Delete Account", @user, method: :delete %><br>
+    <%= button_to "Delete Account", @user, method: :delete, class: "btn btn-danger"%><br>
     </div>
 
 
