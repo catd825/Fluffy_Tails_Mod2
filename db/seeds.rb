@@ -12,12 +12,17 @@ require 'csv'
 User.create(name: Faker::Name.name, password: rand(123456..6123456).to_s, email:Faker::Internet.email)
 end
 
-locations = ["Manhattan", "Brooklyn", "Queens", "Staten Island", "Bronx", "New Jersey", "Long Island"]
+# locations = 
+Location.create(name: "Manhattan", address: "1120 Broadway New York, NY 10011", phone: rand(1234567890..9234567899))
+Location.create(name: "Brooklyn", address: "4231 Flatbush Ave Brooklyn, NY 11292", phone: rand(1234567890..9234567899))
+Location.create(name: "Queens", address: "231 Queens Boulevard Queens, NY 11102", phone: rand(1234567890..9234567899))
+Location.create(name: "Staten Island", address: "1413 Victory Blvd Staten Island, NY 10304", phone: rand(1234567890..9234567899))
+Location.create(name: "Bronx", address: "1416 Nereid Ave Bronx, NY 10467", phone: rand(1234567890..9234567899))
+Location.create(name: "New Jersey", address: "2416 Park Ave Weekhawken, NJ 07086", phone: rand(1234567890..9234567899))
+Location.create(name: "Long Island", address: "2358 Main Ave Garden City, NY 11530", phone: rand(1234567890..9234567899))
 
 
-7.times do
-Location.create(name: locations.sample, address: Faker::Address.street_address, phone: rand(1234567890..9234567899))
-end
+# byebug
 
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'pets.csv'))
