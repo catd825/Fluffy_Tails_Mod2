@@ -1,7 +1,7 @@
 
    <div class="center"> 
     <div class="login_box">
-      <h1 id=login_text><i class="fa fa-user"></i> Login</h1>
+      <h1 id=login_text><i class="fa fa-user"></i> Login</h1><br>
 
 
       <%= form_for :session, url: login_path do |f| %>
@@ -11,7 +11,7 @@
               <p style="color: red;"><%= flash[:notice] %></p>
             <% end %>
 
-        <p id=login_button><%= f.submit "Login", class: "btn btn-primary"%><br></p>
+        <p id=login_button><%= f.submit "Login", class: "btn btn-primary btn-block"%><br></p>
 
       <% end %>
     </div>

@@ -1,28 +1,25 @@
-
-
-    <div class="container-users">
-    <h2>User Profile</h2>
-    <p>Name: <%= @user.name %></p><br>
-    <p>Email: <%= @user.email %></p><br>
-
-    <div>My Favorite Pets:
-
-      <% @user.favorites.each do |fav| %>
-
-        <br><%= link_to fav.pet.name, pet_path(fav.pet.id), class: "btn btn-primary btn-lg"%><br>
-            <%= button_to "Delete Favorite", fav, method: :delete, class: "btn btn-secondary btn-sm"%><br><br>
-
-
-      <% end %> 
+<div class="container-users">
+      <div id="user-text-cont">
+        <h2>User Profile</h2>
+        <p>Name: <%= @user.name %></p>
+        <p>Email: <%= @user.email %></p>
+      </div>
+        <div class="button-container">
+        <p>Your Favorite Pets:</p>
+          <% @user.favorites.each do |fav| %>
+            <%= link_to fav.pet.name, pet_path(fav.pet.id), class: "btn btn-primary btn-block"%>
+              <%= button_to "Remove from Favorites", fav, method: :delete, class: "btn btn-danger btn-block"%><br>
+          <% end %> 
       
-      <br><a href="../pets/">Find More Pets to Love</a> <br><br>
+         
+          <%= link_to "Find More Pets to Love", pets_path, class: "btn btn-secondary btn-block"%>
+          <br><br>
 
+      <%= link_to "Edit your Account", edit_user_path(@user), class: "btn btn-primary btn-block"%>
+      <%= button_to "Delete Account", @user, method: :delete, class: "btn btn-danger btn-block"%>
     </div>
-
-    <%= link_to "Edit your Account", edit_user_path(@user), class: "btn btn-primary"%><br><br>
-
-    <%= button_to "Delete Account", @user, method: :delete, class: "btn btn-danger"%><br>
-    </div>
+    <br>
+</div>
 
 
 
