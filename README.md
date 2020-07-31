@@ -13,3 +13,12 @@ User Story
 5. Pet should be able to be assigned to a location
 6. Location should be able to modify pet.
 7. Validate breed, pet form fields.
+
+
+
+SETUP AND INSTALLATION 
+
+
+1. Run - bundle install
+
+2. This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file. 
