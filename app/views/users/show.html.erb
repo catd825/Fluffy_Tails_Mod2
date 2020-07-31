@@ -7,6 +7,7 @@
         <div class="button-container">
         <p>Your Favorite Pets:</p>
           <% @user.favorites.each do |fav| %>
+            <img src="<%= fav.pet.img_url %>" alt="<%= fav.pet.name%>" height= 60%, width= 60%>
             <%= link_to fav.pet.name, pet_path(fav.pet.id), class: "btn btn-primary btn-block"%>
               <%= button_to "Remove from Favorites", fav, method: :delete, class: "btn btn-danger btn-block"%><br>
           <% end %> 

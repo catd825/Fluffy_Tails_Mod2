@@ -1,4 +1,7 @@
 
+<center><h2>Our Centers</h2></center>
+<br>
+
 
 <%# <%= link_to "Create New", new_location_path %>
 
@@ -7,7 +10,7 @@
   <div class="container2">
     <p><%= link_to location.name, location_path(location) %></p>
     <p><%= location.address %><p>
-    <p><%= location.phone %></p>
+    <p>Phone: <%= location.phone %></p>
     
     This location has <%= pluralize(location.pets.count, 'pet' ) %> available.</p>
     </div><br>
