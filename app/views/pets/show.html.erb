@@ -48,6 +48,10 @@
 <br>
 <div class="container2">
 <p>This animal is located in : </p>
+      <iframe width="300" height="300" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['SECRET_KEY']%>&q=<%= @pet.location.address %>"
+          allowfullscreen>
+    </iframe>
 <p><%= @pet.location.name %></p>
 <p><%= @pet.location.address %></p>
 <p>Phone: <%= @pet.location.phone %></p>
