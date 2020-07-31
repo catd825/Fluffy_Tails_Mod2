@@ -14,7 +14,7 @@ end
 
 # locations = 
 Location.create(name: "Manhattan", address: "1120 Broadway New York, NY 10011", phone: rand(1234567890..9234567899))
-Location.create(name: "Brooklyn", address: "4231 Flatbush Ave Brooklyn, NY 11292", phone: rand(1234567890..9234567899))
+Location.create(name: "Brooklyn", address: "4231 Flatbush Ave Brooklyn, NY 11234", phone: rand(1234567890..9234567899))
 Location.create(name: "Queens", address: "231 Queens Boulevard Queens, NY 11102", phone: rand(1234567890..9234567899))
 Location.create(name: "Staten Island", address: "1413 Victory Blvd Staten Island, NY 10304", phone: rand(1234567890..9234567899))
 Location.create(name: "Bronx", address: "1416 Nereid Ave Bronx, NY 10467", phone: rand(1234567890..9234567899))

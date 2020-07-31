@@ -8,13 +8,19 @@
 
   <% @locations.each do |location| %>
   <div class="container2">
+      <iframe width="300" height="300" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['SECRET_KEY']%>&q=<%= location.address %>"
+          allowfullscreen>
+    </iframe>
     <p><%= link_to location.name, location_path(location) %></p>
     <p><%= location.address %><p>
     <p>Phone: <%= location.phone %></p>
+
     
     This location has <%= pluralize(location.pets.count, 'pet' ) %> available.</p>
     </div><br>
   <% end %>
+
 
 
 
