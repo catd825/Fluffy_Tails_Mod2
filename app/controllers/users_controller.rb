@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
     # before_action :require_login, only: [:edit, :destroy, :show]
     before_action :current_user
+    # skip_before_action :current_user, only: [:info]
     before_action :find_user, only: [:edit, :update, :destroy]
-    skip_before_action :authorized, only: [:new, :create, :index]
+    skip_before_action :authorized, only: [:new, :create, :index, :info]
+
     
     def index
         if params[:search]
@@ -21,6 +23,10 @@ class UsersController < ApplicationController
           flash[:error] = "Can only See Your Own Profile"
           redirect_to users_path
         end
+    end
+
+    def info
+        render :info
     end
 
     def new     
