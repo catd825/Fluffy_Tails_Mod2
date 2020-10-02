@@ -1,9 +1,5 @@
 README
 
-Flatiron School
-
-Mod 2 - Project
-
 User Story
 
 1. User should be able to search for a pet.
@@ -15,9 +11,7 @@ User Story
 7. Validate breed, pet form fields.
 
 
-
 SETUP AND INSTALLATION 
-
 
 1. Run - bundle install
 
