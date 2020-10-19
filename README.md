@@ -33,6 +33,7 @@ You can view the full demo [here](https://www.youtube.com/watch?v=scLpLe3zIxI&fe
 1. Create an account or sign in
 
 ![SignIn](https://j.gifs.com/4Q7GyJ.gif =250x250)
+<img src="https://j.gifs.com/4Q7GyJ.gif" width="250">
 
 2. Login send user to their info page, which includes user info and favorite pets.  You can update your user info here.
 
