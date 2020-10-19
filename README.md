@@ -16,5 +16,3 @@ SETUP AND INSTALLATION
 1. Run - bundle install
 
 2. This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file. 
-
-<iframe src='//gifs.com/embed/login-q7vLXD' frameborder='0' scrolling='no' width='1256px' height='720px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
