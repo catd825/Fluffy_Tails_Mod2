@@ -1,6 +1,6 @@
 ## Fluffy Tail
 
-This is a Mod2 Project for the Flatiron School by [Dmitry Sychev](http://www.github.com/dmitrysychev), [Ben Garlock](http://www.github.com/evilbunnyrabbis), and myself.
+This is a Mod2 Project for the Flatiron School by [Dmitry Sychev](http://www.github.com/dmitrysychev), [Ben Garlock](http://www.github.com/evilbunnyrabbits), and myself.
 
 ### About
 
