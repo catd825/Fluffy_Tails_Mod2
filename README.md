@@ -17,4 +17,4 @@ SETUP AND INSTALLATION
 
 2. This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file.
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](https://j.gifs.com/oVqX0A.gif)
