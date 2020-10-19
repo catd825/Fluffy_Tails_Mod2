@@ -13,8 +13,28 @@ User Story
 
 SETUP AND INSTALLATION 
 
-1. Run - bundle install
+1. Run
+```
+bundle install
+```
 
 2. This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file.
 
-![GitHub Logo](https://j.gifs.com/oVqX0A.gif)
+
+
+You can view the full demo [here](https://www.youtube.com/watch?v=scLpLe3zIxI&feature=youtu.be) or try out the app on heroku [here](https://fluffy-tail.herokuapp.com/)
+
+1. Create an account or sign in
+
+![SignIn](https://j.gifs.com/q7vLXD.gif)
+
+2. Login send user to their info page, which includes user info and favorite pets.  You can update your user info here.
+
+![UserPage](https://j.gifs.com/715Vw8.gif)
+
+
+3. Browse all pets on index page
+![IndexPage](https://j.gifs.com/D15WA5.gif)
+
+4. View Individual Pet Info
+![ShowPage](https://j.gifs.com/oVqX0A.gif)
