@@ -48,7 +48,7 @@ View Individual Pet Info
 
 Search the pet index page
 
-<img src="https://j.gifs.com/1W83kq.gif" width="600">
+<img src="https://j.gifs.com/P7vWwA.gif" width="600">
 
 Favorite a pet
 
