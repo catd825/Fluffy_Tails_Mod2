@@ -52,7 +52,7 @@ Search the pet index page
 
 Favorite a pet
 
-<img src="https://j.gifs.com/k8mXWJ.gif" width="600>
+<img src="https://j.gifs.com/k8mXWJ.gif" width="600">
 
 View by Location
 
