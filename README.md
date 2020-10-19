@@ -1,17 +1,14 @@
-README
-
-User Story
-
-1. User should be able to search for a pet.
-2. User should be able to select a pet.
-3. User should be able to favorite a pet.
-4. User should be able to delete a favorite pet.
-5. Pet should be able to be assigned to a location
-6. Location should be able to modify pet.
-7. Validate breed, pet form fields.
+##Fluffy Tail
 
 
-SETUP AND INSTALLATION 
+###About
+
+Fluffy tail is a Ruby on Rails app that allows you to browse and favorite pets to adopt in the NY Metro area. 
+
+This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file.
+
+
+###Set up and installation
 
 1. This is a Rails application.  Please run:
 ```
@@ -23,9 +20,6 @@ rails db:migrate
 ```
 rails db:seed
 ```
-
-2. This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file.
-
 
 
 You can view the full demo [here](https://www.youtube.com/watch?v=scLpLe3zIxI&feature=youtu.be) or try out the app on heroku [here](https://fluffy-tail.herokuapp.com/)
