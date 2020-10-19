@@ -1,16 +1,17 @@
-##Fluffy Tail
+## Fluffy Tail
 
 
-###About
+### About
 
 Fluffy tail is a Ruby on Rails app that allows you to browse and favorite pets to adopt in the NY Metro area. 
 
 This app uses the google api. You will need to either contact us for the key or generate one yourself and place it in the main app directory .env file.
 
 
-###Set up and installation
+### Set up and installation
 
-1. This is a Rails application.  Please run:
+This is a Rails application.  Please run:
+
 ```
 bundle install
 ```
