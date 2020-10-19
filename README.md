@@ -32,7 +32,7 @@ You can view the full demo [here](https://www.youtube.com/watch?v=scLpLe3zIxI&fe
 ![UserPage](https://j.gifs.com/715Vw8.gif)
 
 3. Browse all pets on index page
-![IndexPage](https://j.gifs.com/D15WA5.gif)
+![IndexPage](https://j.gifs.com/NLqWyN.gif)
 
 4. View Individual Pet Info
 ![ShowPage](https://j.gifs.com/oVqX0A.gif)
