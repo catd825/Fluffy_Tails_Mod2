@@ -24,7 +24,7 @@ rails db:seed
 ```
 
 
-You can view the full demo [here](https://www.youtube.com/watch?v=scLpLe3zIxI&feature=youtu.be) or try out the app on heroku [here](https://fluffy-tail.herokuapp.com/)
+You can view the full demo [here](https://youtu.be/scLpLe3zIxI) or try out the app on heroku [here](https://fluffy-tail.herokuapp.com/)
 
 Create an account or sign in
 
